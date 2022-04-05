@@ -1,0 +1,16 @@
+ .navbar-custom{
+    background-color:#344aa0 !important;; 
+    border-color: #344aa0 !important;; 
+}
+/* Previous Color : #344aa0 !important; */
+/*.sidebar-custom{
+    background-color: #344aa0 !important;
+}
+.brand-link{
+    background-color: #344aa0 !important;
+} */
+.nav-link-top{
+    color: #c15d14 !important;
+    font-size: 18px;
+    font-weight: bold;
+}
