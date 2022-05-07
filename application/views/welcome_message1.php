@@ -29,7 +29,7 @@
                </div>
                <div class="left-block">
                   <div class="box-half">
-                     <div class="vision-mission-wrapper" style="min-height:430px">
+                     <div class="vision-mission-wrapper">
                         <div class="vission">
                            <h2> <img src="<?php echo base_url('assets/website/theme/images/public-opinion-icon.png');?>" alt="" style="height: 42px;"> आज का हिंदी शब्द</h2>
                            <p style="text-align: center;font-weight: bold;font-size: 60px;color: #e5670b;">नैतिक</p>
@@ -41,8 +41,8 @@
                      </div>
                   </div>
                   <div class="box-half">
-                     <div class="whatsnew-wrapper" style="background-color: #ffe384;min-height:430px">
-                        <h2 style="color: #e5670b;text-align:center"><img src="<?php echo base_url('assets/website/assets/images/ebook-new.png');?>" alt="" style="width: 60px;">News & Events</h2>
+                     <div class="whatsnew-wrapper" style="background-color: #e5670b;">
+                        <h2 style="color: #344aa0;text-align:center"><img src="<?php echo base_url('assets/website/assets/images/ebook-new.png');?>" alt="" style="width: 60px;">News & Events</h2>
                         <ul><marquee direction="up" onmouseover="this.stop();" onmouseout="this.start();">
                            <li><p>Description of What's New 1 goes here - dd-mm-yyyy File type (size).</p></li>
                            <li><p>Description of What's New 2 goes here - dd-mm-yyyy File type (size).</p></li>
@@ -59,14 +59,12 @@
             .grid-menu{
                display: flex;
                flex: 0 0 auto;
-               width: 18.66666667%;
-               height: 191px;
-               font-size: 22px;
-               text-shadow: 1px 2px 2px #898989;
+               width: 16.66666667%;
+               height: 148px;
                margin: 2px;
                align-items: center;
                text-align: center;
-               background-color: #cececea8;
+               background-color: #ffffff78;
                color: black;
                font-weight: bold;
                text-transform: uppercase;
@@ -75,31 +73,12 @@
             .grid-menu p{
                margin: auto;
             }
-            .gallery-area a {
-                background: #323232;
-                border: 0 none;
-                color: #fff;
-                display: inline-block;
-                padding: 15px 15px !important;
-                position: relative;
-                text-transform: uppercase;
-            }
-            .footer-bottom-wrapper {
-                /*background-image: url(../images/footer-bottom-bg.png); */
-                background-repeat: repeat;
-                background-color: #040e37 !important;
-                padding: 0px 0px;
-                color: #fff;
-                position: relative;
-                text-align: center;
-            }
            
          </style>
-         <div class="wrapper home-banner tab-section" id="background-id" style="transition: background 2s;background: url(<?php echo base_url('assets/website/assets/images/finance1.jpg');?>);
+         <div class="wrapper home-banner tab-section" id="background-id" style="transition: background 2s;background: url(<?php echo base_url('assets/website/assets/images/hr.jpg');?>);
          background-repeat: no-repeat;
          background-size: cover;opacity: 0.8;">
-            <!-- <div class="container common-container four_content"> -->
-            <div class="row four_content"> 
+            <div class="container common-container four_content">
               <div class="row justify-content-center">
                  <div class="col-md-2 grid-menu" id="hr">
                     <p class="grid-menu-item">Human Resource</p>
@@ -136,7 +115,7 @@
             </div>
             </div>
          </div>
-         <div class="wrapper home-btm-slider" style="background-color: #f0c241;">
+         <div class="wrapper home-btm-slider">
             <div class="container common-container four_content gallery-container">
                <div class="gallery-area clearfix">
                   <div class="gallery-heading">
@@ -163,7 +142,7 @@
                   <div class="video-wrapper">   
                      <div class="ebook-wrapper">
                         <div class="ebbok-content">
-                           <span style="color:#e25f00">Today Birthday</span> 
+                           <span>Today Birthday</span> 
                            <h2>.................... </h2>                           
                         </div>                        
                         
@@ -173,7 +152,7 @@
             </div>
          </div>
       </section>
-    <!--   <section class="important-link">
+      <section class="important-link">
          <div class="container carousel-container">
             <h2>PIPELINE</h2>
             <div id="impt-link-Carousel" class="flexslider carousel ">
@@ -205,7 +184,7 @@
                </ul>
             </div>
          </div>
-      </section> -->
+      </section>
       <!--/.body-wrapper-->
       <!--/.banner-wrapper-->
      
