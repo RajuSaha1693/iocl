@@ -25,11 +25,75 @@
       <link href="<?php echo base_url('assets/website/theme/css/site-responsive.css');?>" rel="stylesheet" media="all">
       <link href="<?php echo base_url('assets/website/theme/css/ma5gallery.css');?>" rel="stylesheet" type="text/css">
       <link href="<?php echo base_url('assets/website/theme/css/print.css');?>" rel="stylesheet" type="text/css" media="print">
+      <link href="<?php echo base_url('assets/website/theme/css/demo.css');?>" rel="stylesheet" type="text/css" media="print">
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
       <noscript>
          <link href="<?php echo base_url('assets/website/theme/css/no-js.css');?>" type="text/css" rel="stylesheet">
       </noscript>
    </head>
+   <style type="text/css">
+      .container {
+  padding: 2rem 0rem;
+}
+
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 400px;
+  }
+  .modal-dialog .modal-content {
+    padding: 1rem;
+  }
+}
+.modal-header .close {
+  margin-top: -1.5rem;
+}
+
+/*.form-title {
+  margin: -2rem 0rem 2rem;
+}*/
+
+.btn-round {
+  border-radius: 3rem;
+    width: 326px;
+}
+.btn-info {
+    color: #fff !important;
+    background-color: #e67b2e !important;
+    border-color: #ffffff !important;
+    }
+
+.delimiter {
+  padding: 1rem;
+}
+
+.social-buttons .btn {
+  margin: 0 0.5rem 1rem;
+}
+
+.signup-section {
+  padding: 0.3rem 0rem;
+}
+.modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #0b1324 !important;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 0.3rem;
+    outline: 0;
+}
+   </style>
+   <script type="text/javascript">
+      $(document).ready(function() {             
+$('#loginModal').modal('show');
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+});
+   </script>
    <body>
       <div id="fb-root"></div>
       <header>
@@ -182,13 +246,13 @@ Toll Free No. 18003453759 (Please Contact if Case of Emargency,Pipeline Leakage,
             
                     <li class="nav-item"><a href="#">TPM</a></li>
                   </ul>
-                  <button style="float: right;
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#loginModal" style="float: right;
                   margin: 4px;
                   padding: 5px 12px;
                   color: white;
                   background-color: #e5670b;
                   border: 3px solid #e5670b;
-                  border-radius: 5px;">SCADA</button>
+                  border-radius: 5px;">SCADA Login</button>
                </nav>
                <nav class="main-menu clearfix" id="overflow_menu">
                   <ul class="nav-menu clearfix">
@@ -197,7 +261,50 @@ Toll Free No. 18003453759 (Please Contact if Case of Emargency,Pipeline Leakage,
             </div>
          </section>
       </header>
+      
 
+      <!-- Modal -->
+     <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+          <!--   <div class="modal-header border-bottom-0">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+              </button>
+            </div> -->
+            <div class="modal-body">
+              <div class="form-title text-center">
+                <h4 style="color:#e77c2f">Scada Admin Login</h4>
+              </div>
+              <div class="d-flex flex-column text-center">
+                <form>
+                  <div class="form-group" style="margin-bottom: 23px;">
+                    <input type="email" class="form-control" id="email1"placeholder="Your email address...">
+                  </div>
+                  <div class="form-group" style="margin-bottom: 23px;">
+                    <input type="password" class="form-control" id="password1" placeholder="Your password...">
+                  </div>
+                  <button type="button" class="btn btn-info btn-block btn-round">Login</button>
+                </form>
+                
+                <div class="text-center text-muted delimiter">or use a social network</div>
+                <div class="d-flex justify-content-center social-buttons">
+                  <button type="button" class="btn btn-secondary btn-round" data-toggle="tooltip" data-placement="top" title="Twitter">
+                    <i class="fab fa-twitter"></i>
+                  </button>
+                  <button type="button" class="btn btn-secondary btn-round" data-toggle="tooltip" data-placement="top" title="Facebook">
+                    <i class="fab fa-facebook"></i>
+                  </button>
+                  <button type="button" class="btn btn-secondary btn-round" data-toggle="tooltip" data-placement="top" title="Linkedin">
+                    <i class="fab fa-linkedin"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+           
+        </div>
+      </div>
        <?php                    
             if(isset($_view) && $_view)
             $this->load->view($_view);
@@ -242,7 +349,10 @@ Toll Free No. 18003453759 (Please Contact if Case of Emargency,Pipeline Leakage,
       <script src="<?php echo base_url('assets/website/assets/js/megamenu.js');?>"></script>
       <script src="<?php echo base_url('assets/website/theme/js/easyResponsiveTabs.js');?>"></script>
       <script src="<?php echo base_url('assets/website/theme/js/custom.js');?>"></script>
-
+  <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.3.1/css/all.css'>
       <?php                    
             if(isset($_script) && $_script)
             $this->load->view($_script);
@@ -264,7 +374,7 @@ Toll Free No. 18003453759 (Please Contact if Case of Emargency,Pipeline Leakage,
            let operation=document.getElementById('operation');
 
            operation.addEventListener('mouseover', () => {
-                bgDiv.style.backgroundImage = `url('<?php echo base_url('assets/website/assets/images/operation.jpg');?>')`;
+                bgDiv.style.backgroundImage = `url('<?php echo base_url('assets/website/assets/images/material.jpg');?>')`;
            });
 
            let material=document.getElementById('material');
@@ -274,4 +384,7 @@ Toll Free No. 18003453759 (Please Contact if Case of Emargency,Pipeline Leakage,
            });
        </script>
    </body>
+
+
 </html>
+
