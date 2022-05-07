@@ -580,7 +580,7 @@ h3.sub-title.bold {
     content: '';
 }
 .footer-bottom-wrapper {
-    background-image: url(../images/footer-bottom-bg.png);
+    /*background-image: url(../images/footer-bottom-bg.png);*/
     background-repeat: repeat;
     background-color: #333;
     padding: 0px 0px;
