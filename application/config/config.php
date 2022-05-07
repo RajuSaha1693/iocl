@@ -23,7 +23,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://127.0.0.1:8383/gspl/';
+
+$aaa=$_SERVER['PHP_SELF'];
+$bb=explode('/', $aaa);
+$cc=$bb[1];
+$host=$_SERVER['HTTP_HOST'];
+/*Host Header*/
+//$host=$_SERVER['SERVER_NAME'];
+$var=$host."/".$cc;
+
+$config['base_url'] = "http://".$var;
+
+
+// $config['base_url'] = 'http://127.0.0.1:8383/gspl/';
 
 /*
 |--------------------------------------------------------------------------

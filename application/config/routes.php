@@ -113,3 +113,7 @@ $route['dashboard']="DashboardController/index";
 
 //Gallery
 $route['gallery']="Welcome/gallery";
+
+//scada routes
+$route['loadScada'] = "Scada/loadDataFromExcel";
+$route['showScada'] = "Scada/showScadaData";
